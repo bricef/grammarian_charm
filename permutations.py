@@ -19,10 +19,15 @@ def distance1(word):
     return [word]
   if word == "of":
     return ["of"]
+
+  for c in alphabet :
+    possible.append(c+word)
   for i, cw in enumerate(word):
     possible.append(''.join(word[:i]+word[i+1:]))
     for c in [c for c in alphabet if c != cw] :
       possible.append(''.join(word[:i]+c+word[i+1:]))
+  for c in alphabet :
+    possible.append(word+c)
   return [p for p in possible if is_valid(p)]
 
 def is_valid(word):
