@@ -19,6 +19,8 @@ def distance1(word):
     return [word]
   if word == "of":
     return ["of"]
+  if word == "ua":
+    return ["ua"]
 
   for c in alphabet :
     possible.append(c+word)
