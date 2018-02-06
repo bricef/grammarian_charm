@@ -60,5 +60,5 @@ for spell in spells:
   for possible in possible_spells(spell):
     print("    "+possible)
 
-print(possible_spells("kill word"))
+# print(possible_spells("kill word"))
 
